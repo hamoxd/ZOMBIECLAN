@@ -11,11 +11,9 @@ client.on('message', message => {
       }
 });
 
-
-
 client.on('ready', function(){
     var ms = 60000 ;
-    var setGame = ['^^invite','^^help','^^help | ^^invite','^^Support'];
+    var setGame = ['RMDAN KREM','RMDAN KREM','^^help | ^^invite','RMDAN KREM'];
     var i = -1;
     var j = 0;
     setInterval(function (){
@@ -30,6 +28,8 @@ client.on('ready', function(){
     }, ms);
 
 });
+
+
 client.on('message', message => {
  if (message.content.includes('disc ord.gg')){      
                      if(!message.channel.guild) return message.reply ('')
@@ -970,7 +970,87 @@ client.on('message', message=>{
 })
   
   
-  
+client.on('message', message => {
+ if (message.content.startsWith("منور")) {
+                                 var mentionned = message.mentions.users.first();
+             var mentionavatar;
+               if(mentionned){
+                   var mentionavatar = mentionned;
+               } else {
+                   var mentionavatar = message.author;
+                   
+               }
+               let bot;
+               if(message.author.bot) {
+                   bot = 'Bot'
+               } else {
+                   bot = 'User'
+               } 
+  var EsTeKnAN = new Discord.RichEmbed()
+  .setColor('RANDOM')
+  .setThumbnail(`${mentionavatar.avatarURL}`)
+  .addField("***شكرا الانضمامك الينا***" ,mentionavatar.username )
+  .setDescription('***بكل حب واحترام وشوق نستقبلك ونتمنى لك قضآء أجمل اللحظات ولآوقات معنا***')
+  .setImage('http://www.imgion.com/images/01/Welcome-buddy.jpg')
+   message.channel.sendEmbed(EsTeKnAN);
+  }
+});  
+
+
+client.on('message', message => {
+ if (message.content.startsWith("ولكم")) {
+                                 var mentionned = message.mentions.users.first();
+             var mentionavatar;
+               if(mentionned){
+                   var mentionavatar = mentionned;
+               } else {
+                   var mentionavatar = message.author;
+                   
+               }
+               let bot;
+               if(message.author.bot) {
+                   bot = 'Bot'
+               } else {
+                   bot = 'User'
+               } 
+  var EsTeKnAN = new Discord.RichEmbed()
+  .setColor('RANDOM')
+  .setThumbnail(`${mentionavatar.avatarURL}`)
+  .addField("***شكرا الانضمامك الينا***" ,mentionavatar.username )
+  .setDescription('***بكل حب واحترام وشوق نستقبلك ونتمنى لك قضآء أجمل اللحظات ولآوقات معنا***')
+  .setImage('http://www.imgion.com/images/01/Welcome-buddy.jpg')
+   message.channel.sendEmbed(EsTeKnAN);
+  }
+});  
+
+
+client.on('message', message => {
+ if (message.content.startsWith("!")) {
+                                 var mentionned = message.mentions.users.first();
+             var mentionavatar;
+               if(mentionned){
+                   var mentionavatar = mentionned;
+               } else {
+                   var mentionavatar = message.author;
+                   
+               }
+               let bot;
+               if(message.author.bot) {
+                   bot = 'Bot'
+               } else {
+                   bot = 'User'
+               } 
+  var EsTeKnAN = new Discord.RichEmbed()
+  .setColor('RANDOM')
+  .setThumbnail(`${mentionavatar.avatarURL}`)
+  .addField("***شكرا الانضمامك الينا***" ,mentionavatar.username )
+  .setDescription('***𝕎𝔼𝕃ℂ𝕆𝕄𝔼 𝕋𝕆 ℂ𝕃𝔸ℕ ℤ***')
+  .setImage('http://www.imgion.com/images/01/Welcome-buddy.jpg')
+   message.channel.sendEmbed(EsTeKnAN);
+  }
+});  
+
+
   
 client.on('message', message => {
  if (message.content.startsWith("ترحيب 1")) {
