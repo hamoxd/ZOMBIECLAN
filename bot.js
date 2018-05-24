@@ -1391,6 +1391,53 @@ var mentionned = message.mentions.members.first();
      });
 
 
+ prefix = "^^"
+client.on('message', message => {
+
+  if (message.content.startsWith( prefix + "z")) {
+  if (!message.channel.guild) return;
+  let args = message.content.split(" ").slice(1).join(' ');
+  client.channels.get("448204717185826816").send(
+      "\n" + "**" + " ● مرسل من قبل : " + "**" +
+      "\n" + "**" + "» " + message.author.tag + "**" +
+      "\n" + "**" + " ● اقتراحي هو : " + "**" +
+      "\n" + "**" + args + "**")
+
+  }
+  });
+  
+  client.on('message', msg => {
+if (msg.content.includes('الرابط')) {
+msg.reply(`https://discord.gg/EXNztT6 تفضل`)
+}
+});
+  
+  
+   client.on('message', msg => {
+if (msg.content.includes('رابط')) {
+msg.reply(`https://discord.gg/EXNztT6 تفضل`)
+}
+});
+		 
+client.on('message', msg => {
+if (msg.content.includes('شكرا')) {
+msg.reply(`https://discord.gg/EXNztT6 تفضل`)
+}
+});
+		 
+
+
+client.on('message', msg => {
+if (msg.content.includes('باك')) {
+msg.reply(`ﯡڷــﯖــم ۖ مــڼــﯜڔ ۛ ּڀــ̍ا ̨؏ــڛــڶ ۖ مــن ڙمــٱن ּ؏ــڼــک :green_heart:`)
+}
+});
+		 
+  client.on('message', msg => {
+if (msg.content.includes('برب')) {
+msg.reply(`تٌــيَــتٌ يَ حٍــلُــۆ،  لُآ تٌــطًــۆلُ :disappointed:`)
+}
+});
 
 
 
