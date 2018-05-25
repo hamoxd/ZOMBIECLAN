@@ -1416,7 +1416,45 @@ client.on('message', message => {
     }
     });
 
+client.on('ready', function(){
+    var ms = 60000 ;
+    var setGame = ['RMDAN KREM','RMDAN KREM','^^help | ^^invite','RMDAN KREM'];
+    var i = -1;
+    var j = 0;
+    setInterval(function (){
+        if( i == -1 ){
+            j = 1;
+        }
+        if( i == (setGame.length)-1 ){
+            j = -1;
+        }
+        i = i+j;
+        client.user.setGame(setGame[i],`http://www.twitch.tv/GamerzBot`);
+    }, ms);
 
+});
+
+client.on('message', function(message) {
+    if (!message.member.hasPermissions(['ADMINISTRATOR'])){
+            let command = message.content.split(" ")[0];
+        if(message.content.includes('discord.gg')){
+        message.reply (' ')
+           if(!message.channel.guild) return message.reply('** This command only for servers**');
+     message.member.addRole(message.guild.roles.find('name', 'Muted')); 
+    const embed500 = new Discord.RichEmbed()
+      .setTitle(":x: | تمت معاقبتك")
+            .addField(`** لقد قمت بمخالفة قوانين السيرفر من خلال نشر سيرفرات اخرى  **` , `**ملاحظة  : إن كآن هذآ الميوت عن طريق الخطأ تكلم مع الادآرة**`)
+      .addField(`by`,`iMr.KBOOSH`)
+            .setColor("c91616")
+            .setThumbnail(`${message.author.avatarURL}`)
+            .setAuthor(message.author.username, message.author.avatarURL) 
+        .setFooter(`${message.guild.name} Server`)
+     message.channel.send(embed500) 
+    
+        
+    }
+    }
+})
 
 
 // THIS  MUST  BE  THIS  WAY
