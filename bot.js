@@ -1434,6 +1434,24 @@ client.on('ready', function(){
 
 });
 
+client.on('message', msg => {
+if (msg.content.includes('رابط')) {
+msg.reply(`https://discord.gg/EXNztT6 :green_heart:`)
+}
+});		 
+
+client.on('message', msg => {
+if (msg.content.includes('باك')) {
+msg.reply(`ﯡڷــﯖــم ۖ مــڼــﯜڔ ۛ ּڀــ̍ا ̨؏ــڛــڶ ۖ مــن ڙمــٱن ּ؏ــڼــک :green_heart:`)
+}
+});
+	  
+client.on('message', msg => {
+if (msg.content.includes('برب')) {
+msg.reply(`تٌــيَــتٌ يَ حٍــلُــۆ،  لُآ تٌــطًــۆلُ :disappointed:`)
+}
+});
+
 
 // THIS  MUST  BE  THIS  WAY
 client.login(process.env.BOT_TOKEN);
