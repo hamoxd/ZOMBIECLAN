@@ -22,22 +22,11 @@ client.on('message', message => {
     
  
        
-          member.ban().then((member) => {
-              message.channel.send("", {embed: {
-              author: {
-              },
-              title: 'بسبب النشر ' + member.displayName + ' تم طرد',
-              color: 490101,
-              }
-            });
-        }
-      ) 
-    }
-}
-});
-
 client.on('ready', () => {
-  client.user.setGame(`RMDAN KREM`,'https://www.twitch.tv/v5bz');
+  client.user.setGame('*help | *invite','https://www.twitch.tv/peery13');
+  console.log('---------------');
+  console.log(' Bot Is Online')
+  console.log('---------------')
 });
 
 
