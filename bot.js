@@ -1332,7 +1332,7 @@ client.on('message', message => {
     )
     const embed = new Discord.RichEmbed()
         .setColor("RANDOM")
-          .setDescription("تم أرسال الرابط برسالة خاصة")
+          .setDescription("تم ارسال الرابط شايك خاص")
            .setAuthor(client.user.username, client.user.avatarURL)
                  .setAuthor(client.user.username, client.user.avatarURL)
                 .setFooter('طلب بواسطة: ' + message.author.tag)
@@ -1345,6 +1345,7 @@ client.on('message', message => {
       message.author.sendEmbed(Embed11)
     }
 }); 
+
 
  client.on('message', message => {
                     var prefix = "#";
@@ -1403,27 +1404,24 @@ client.on('message', message => {
       "\n" + "**" + " ● اقتراحي هو : " + "**" +
       "\n" + "**" + args + "**")
 
-  }
-  });
+
   
- client.on('message', msg => {
+
+  
+  
+client.on('message', msg => {
 if (msg.content.includes('رابط')) {
-msg.reply(`https://discord.gg/EXNztT6 تفضل`)
+msg.reply(`https://discord.gg/EXNztT6 :green_heart:`)
 }
-});
-  
-  
-		 
-
-
+});		 
 
 client.on('message', msg => {
 if (msg.content.includes('باك')) {
 msg.reply(`ﯡڷــﯖــم ۖ مــڼــﯜڔ ۛ ּڀــ̍ا ̨؏ــڛــڶ ۖ مــن ڙمــٱن ּ؏ــڼــک :green_heart:`)
 }
 });
-		 
-  client.on('message', msg => {
+	  
+client.on('message', msg => {
 if (msg.content.includes('برب')) {
 msg.reply(`تٌــيَــتٌ يَ حٍــلُــۆ،  لُآ تٌــطًــۆلُ :disappointed:`)
 }
