@@ -22,7 +22,23 @@ client.on('message', message => {
     
  
        
+          member.ban().then((member) => {
+              message.channel.send("", {embed: {
+              author: {
+              },
+              title: 'بسبب النشر ' + member.displayName + ' تم طرد',
+              color: 490101,
+              }
+            });
+        }
+      ) 
+    }
+}
+});
 
+client.on('ready', () => {
+  client.user.setGame(`RMDAN KREM`,'https://www.twitch.tv/v5bz');
+});
 
 
 
@@ -1385,7 +1401,7 @@ client.on('message', message => {
        .addField('Server', message.guild.name)
        .addField('Sender', message.author.username)
        .addField('Message', args)
-       .setImage("")
+       .setImage("https://i.imgur.com/BnMhJXQ.png")
        .setThumbnail(message.author.avatarURL)
        .setFooter(copy, client.user.avatarURL);
     m.send({ embed: bc })
