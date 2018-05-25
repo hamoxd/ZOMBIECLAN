@@ -1406,25 +1406,15 @@ client.on('message', message => {
   }
   });
   
-  client.on('message', msg => {
-if (msg.content.includes('الرابط')) {
-msg.reply(`https://discord.gg/EXNztT6 تفضل`)
-}
-});
-  
-  
-   client.on('message', msg => {
+ client.on('message', msg => {
 if (msg.content.includes('رابط')) {
 msg.reply(`https://discord.gg/EXNztT6 تفضل`)
 }
 });
+  
+  
 		 
-client.on('message', msg => {
-if (msg.content.includes('شكرا')) {
-msg.reply(`العفو`)
-}
-});
-		 
+
 
 
 client.on('message', msg => {
