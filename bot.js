@@ -1421,7 +1421,7 @@ msg.reply(`https://discord.gg/EXNztT6 تفضل`)
 		 
 client.on('message', msg => {
 if (msg.content.includes('شكرا')) {
-msg.reply(`https://discord.gg/EXNztT6 تفضل`)
+msg.reply(`العفو`)
 }
 });
 		 
