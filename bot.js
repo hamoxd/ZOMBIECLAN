@@ -22,11 +22,22 @@ client.on('message', message => {
     
  
        
-client.on('ready', () => {
-  client.user.setGame('*help | *invite','https://www.twitch.tv/peery13');
-  console.log('---------------');
-  console.log(' Bot Is Online')
-  console.log('---------------')
+client.on('ready', function(){
+    var ms = 60000 ;
+    var setGame = ['RMDAN KREM','RMDAN KREM','^^help | ^^invite','RMDAN KREM'];
+    var i = -1;
+    var j = 0;
+    setInterval(function (){
+        if( i == -1 ){
+            j = 1;
+        }
+        if( i == (setGame.length)-1 ){
+            j = -1;
+        }
+        i = i+j;
+        client.user.setGame(setGame[i],`http://www.twitch.tv/GamerzBot`);
+    }, ms);
+
 });
 
 
